@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>CPE Trainer</title>
+    <meta charset="utf-8">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+  </head>
+  <body>
+
+    <div id="canvascontainer">
+      <canvas id="canvas" width="2000" height="2000"></canvas>
+    </div>
+
+    <div class="bg-modal">
+      <div id="modal-ans">
+        <img id="imgans" src="../images/pics/blank.jpg" alt="" draggable="false">
+      </div>
+      <div id="modal-content">
+        <div class="close">+</div>
+        <img id="img" src="../images/pics/blank.jpg" alt="" draggable="false">
+      </div>
+    </div>
+
+    <div id="book">
+      <div id="leftpage">
+        <img class="map" src="../images/pageimages/0 (116).jpg" usemap="#map1" alt="left" draggable="false">
+      </div>
+      <div id="rightpage">
+        <img class="map" src="../images/pageimages/0 (117).jpg" usemap="#map2" alt="right" draggable="false">
+      </div>
+    </div>
+
+    <map name="map1">
+      <area id="one1" shape="rect" coords="40,110,430,500">
+    </map>
+    <map name="map11">
+      <area id="one11" shape="rect" coords="173 , 74 , 385 , 84.5">
+      <area id="one12" shape="rect" coords="50.5 , 142 , 385 , 152">
+      <area id="one13" shape="rect" coords="50 , 168.5 , 384.5 , 179">
+      <area id="one14" shape="rect" coords="50.5 , 209.5 , 334.5 , 220">
+      <area id="one15" shape="rect" coords="50 , 235.5 , 353 , 246.5">
+      <area id="one16" shape="rect" coords="90 , 268 , 343.5 , 279.5">
+      <area id="one17" shape="rect" coords="50.5 , 308 , 319 , 318">
+      <area id="one18" shape="rect" coords="211.5 , 322 , 385 , 332">
+    </map>
+    <map name="map2">
+      <area id="two1" shape="rect" coords="40,110,430,580">
+    </map>
+    <map name="map21">
+      <area id="two11" shape="rect" coords="69 , 71 , 391.5 , 80.5">
+      <area id="two12" shape="rect" coords="114 , 138.5 , 403.5 , 149">
+      <area id="two13" shape="rect" coords="51.5 , 228 , 436 , 238">
+      <area id="two14" shape="rect" coords="30,295,462,305">
+      <area id="two15" shape="rect" coords="118,362,412,374">
+      <area id="two16" shape="rect" coords="68,428,357,442">
+    </map>
+
+    <ul id="nav">
+      <li><a href="../chapters.html"><div id="home"><i class="fa fa-home" aria-hidden="true"></i></div></a></li>
+      <li><a href="8r1.html"><div id="previous"><i class="fa fa-arrow-left" aria-hidden="true"></i></div></a></li>
+      <li><div id="back"><i class="fa fa-columns" aria-hidden="true"></i></div></li>
+      <li><a href="8r3.html"><div id="next"><i class="fa fa-arrow-right" aria-hidden="true"></i></div></a></li>
+      <li id="showall" style="color:#0066ff;" onclick="javascript:showAns();"><div><i class="fa fa-check" aria-hidden="true"></i></div></li>
+      <li id="hideall" style="color:#0066ff;" onclick="javascript:hideAns();hideCirc();"><div><i class="fa fa-square-o" aria-hidden="true"></i></div></li>
+      <li onclick="javascript:newPage();"><div id="newpage"><i class="fa fa-file-o" aria-hidden="true"></i></div></li>
+      <li style="background-color:black; color:white;" onclick="javascript:changeColor('black');"><div id="black"><i class="fa fa-pencil" aria-hidden="true"></i></div></li>
+      <li style="background-color:red; color:white;" onclick="javascript:changeColor('red');"><div id="red"><i class="fa fa-pencil" aria-hidden="true"></i></div></li>
+      <li style="background-color:green; color:white;" onclick="javascript:changeColor('green');"><div id="green"><i class="fa fa-pencil" aria-hidden="true"></i></div></li>
+      <li style="background-color:blue; color:white;" onclick="javascript:changeColor('blue');"><div id="blue"><i class="fa fa-pencil" aria-hidden="true"></i></div></li>
+      <li style="color:black;" onclick="javascript:changeColor('white');"><div id="white"><i class="fa fa-eraser" aria-hidden="true"></i></div></li>
+      <li style="color:black;" onclick="javascript:clearCanvas();"><div id="eraser"><i class="fa fa-trash-o" aria-hidden="true"></i></div></li>
+      <li><div id="fullscreen"><i class="fa fa-arrows-alt" aria-hidden="true"></i></div></li>
+    </ul>
+
+    <script type="text/javascript" src="../js/8r2.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.maphilight.js"></script>
+    <script>$(function() {$('.map').maphilight({fillColor: "008800", fillOpacity:0.5});});</script>
+  </body>
+</html>
